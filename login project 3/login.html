@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ویرایش شماره تلفن</title>
+
+    <link rel="stylesheet" href="./stayle/bootstrap.rtl.min.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Vazir, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .form-container {
+        background-color: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .form-container h2 {
+        font-weight: bold;
+        margin-bottom: 1.5rem;
+      }
+      .form-container .btn {
+        background-color: #333;
+        border: none;
+        color: #fff;
+      }
+      .form-container .btn:hover {
+        background-color: #222;
+      }
+      .form-container a {
+        color: #333;
+        text-decoration: none;
+      }
+      .form-container a:hover {
+        text-decoration: underline;
+      }
+      .display-number {
+        background-color: #f8f9fa;
+        padding: 0.375rem 0.75rem;
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        text-align: center;
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      .display-number label {
+        display: block;
+        font-size: 0.875rem;
+        color: #666;
+        margin-bottom: 0.25rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="d-flex align-items-center min-vh-100 p-4">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-lg-6">
+            <div class="form-container">
+              <form action="#">
+                <h2 class="text-center">  نقش خودتان وارد کنید</h2>
+                <div class="mb-3">
+                  <div class="display-number">
+                    <label for="driver-number">  راننده هستم</label>
+                    
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="display-number">
+                    <label for="owner-number">   صاحب بار هستم </label>
+                    
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success w-100">
+                   بازگشت
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
