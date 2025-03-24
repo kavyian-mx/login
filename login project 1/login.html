@@ -1,74 +1,55 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ثبت نام</title>
+    <link rel="stylesheet" href="./stayle/bootstrap.rtl.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <section class="min-vh-100 d-flex align-items-center p-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card shadow border-0 rounded-3">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">ثبت نام</h2>
+                            
+                            <div class="text-center mb-4">
+                                <p class="h5 text-muted">به اپلیکشن شوفر خوش آمدید</p>
+                            </div>
 
-    <link rel="stylesheet" href="./stayle/bootstrap.rtl.min.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
-      rel="stylesheet"
-    />
-    <style>
-      body {
-        font-family: Vazir, sans-serif;
-        background-color: #f8f9fa;
-      }
-      .form-container {
-        background-color: #fff;
-        border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .form-container h2 {
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-      }
-      .form-container .btn {
-        width: 100%;
-        background-color: #333;
-        border: none;
-        color: #fff;
-      }
-      .form-container .btn:hover {
-        background-color: #222;
-      }
-      .form-container a {
-        color: #333;
-        text-decoration: none;
-      }
-      .form-container a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <section class="d-flex align-items-center min-vh-100 p-4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6">
-            <div class="form-container">
-              <form action="#">
-                <h2 class="text-center">ثبت نام</h2>
-                <div class="mb-3">
-                  <label for="fullname" class="form-label"
-                    >   به اپلیکشن شوفر خوش آمدید</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="fullname"
-                    placeholder="شماره تلفن  خود را وارد کنید"
-                  />
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">شماره تلفن خود را وارد کنید</label>
+                                    <input 
+                                        type="tel" 
+                                        class="form-control form-control-lg" 
+                                        placeholder="09xxxxxxxxx"
+                                        pattern="09\d{9}"
+                                    >
+                                </div>
+                                
+                                <div class="row g-2 mt-3">
+                                    <div class="col-md-8 col-12">
+                                        <button type="submit" class="btn btn-info btn-lg w-100">
+                                            ارسال کد
+                                        </button>
+                                    </div>
+                                    <div class="col-md-4 col-12">
+                                        <a href="/help" class="btn btn-outline-secondary btn-lg w-100">
+                                            راهنما
+                                         
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <button type="submit" class="btn btn-info">ارسال  کد</button>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-  </body>
+</body>
 </html>

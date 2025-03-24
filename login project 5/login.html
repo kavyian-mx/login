@@ -1,99 +1,77 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ویرایش شماره تلفن</title>
-
-    <link rel="stylesheet" href="./stayle/bootstrap.rtl.min.css" />
-
-    <link
-      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احراز هویت</title>
+    <link rel="stylesheet" href="./stayle/bootstrap.rtl.min.css">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/iranica-font@v1.0.0/dist/font-face.css" rel="stylesheet">
     <style>
-      body {
-        font-family: Vazir, sans-serif;
-        background-color: #f8f9fa;
-      }
-      .form-container {
-        background-color: #fff;
-        border-radius: 1rem;
-        padding: 2rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .form-container h2 {
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-      }
-      .form-container .btn {
-        background-color: #333;
-        border: none;
-        color: #fff;
-      }
-      .form-container .btn:hover {
-        background-color: #222;
-      }
-      .form-container a {
-        color: #333;
-        text-decoration: none;
-      }
-      .form-container a:hover {
-        text-decoration: underline;
-      }
-      .display-number {
-        background-color: #f8f9fa;
-        padding: 0.375rem 0.75rem;
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-        text-align: center;
-        font-size: 1.25rem;
-        font-weight: bold;
-      }
-      .display-number label {
-        display: block;
-        font-size: 0.875rem;
-        color: #666;
-        margin-bottom: 0.25rem;
-      }
+        /* فقط برای حذف اسکرول‌های عددی */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+        body { font-family: 'Iranica', sans-serif; }
     </style>
-  </head>
-  <body>
-    <section class="d-flex align-items-center min-vh-100 p-4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-8 col-lg-6">
-            <div class="form-container">
-              <form action="#">
-                <h2 class="text-center">حقیقی</h2>
-                <div class="mb-3">
-                  <div class="display-number">
-                    <label for="driver-number">کد ملی را وارد کنید</label>
-                  </div>
+</head>
+<body class="bg-light">
+    <section class="min-vh-100 d-flex align-items-center p-3">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card shadow border-0 rounded-3">
+                        <div class="card-body p-4">
+                            <h2 class="text-center mb-4">احراز هویت حقیقی</h2>
+
+                            <!-- فیلد کد ملی -->
+                            <div class="mb-4">
+                                <label class="form-label">کد ملی</label>
+                                <input 
+                                    type="number" 
+                                    class="form-control form-control-lg text-center" 
+                                    placeholder="کد ملی  "
+                                    min="0000000000"
+                                    max="9999999999"
+                                    inputmode="numeric"
+                                >
+                            </div>
+
+                            <!-- بخش آپلود کارت ملی -->
+                            <div class="mb-4">
+                                <label class="form-label">آپلود کارت ملی</label>
+                                <div class="input-group">
+                                    <input 
+                                        type="file" 
+                                        class="form-control" 
+                                        accept=".jpg,.png,.pdf"
+                                    >
+                                </div>
+                            </div>
+
+                            <!-- دکمه‌های کنترلی -->
+                            <div class="row g-2 mt-4">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-danger w-100">
+                                        بازگشت
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="submit" class="btn btn-primary w-100">
+                                        مرحله بعدی
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                  <div class="display-number">
-                    <label for="owner-number">آپلود کارت ملی</label>
-                  </div>
-                </div>
-                <!-- تغییرات اینجا اعمال شده -->
-                <div class="row g-2">
-                  <div class="col-6">
-                    <button type="submit" class="btn btn-success w-100">
-                      بازگشت
-                    </button>
-                  </div>
-                  <div class="col-6">
-                    <button type="submit" class="btn btn-success w-100">
-                      مرحله بعدی
-                    </button>
-                  </div>
-                </div>
-              </form>
             </div>
-          </div>
         </div>
-      </div>
     </section>
-  </body>
+</body>
 </html>
