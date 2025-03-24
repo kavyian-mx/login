@@ -50,18 +50,31 @@
         font-size: 1.25rem;
         font-weight: bold;
       }
-      .input-group {
-        display: flex;
-        gap: 0.5rem;
-      }
-      .input-group input {
-        width: 3rem;
+      .single-input {
+        width: 100%;
         text-align: center;
         font-size: 1.25rem;
+        padding: 0.75rem;
+        -moz-appearance: textfield; /* حذف اسکرول برای فایرفاکس */
+      }
+      /* حذف اسکرول برای مرورگرهای وبکیت */
+      .single-input::-webkit-outer-spin-button,
+      .single-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
       }
       .button-group {
         display: flex;
         gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      @media (max-width: 576px) {
+        .form-container {
+          padding: 1.5rem;
+        }
+        .button-group {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
@@ -82,7 +95,7 @@
                   <div class="row align-items-center g-2">
                     <div class="col-8">
                       <p id="display-number" class="display-number m-0">
-                        ۰۹۱۲۳۴۵۶۷۸۹ <!-- عدد ۱۱ رقمی نمایش داده شده -->
+                        ۰۹۱۲۳۴۵۶۷۸۹
                       </p>
                     </div>
                     <div class="col-4">
@@ -93,51 +106,18 @@
                   </div>
                 </div>
 
-                <!-- پنج خانه برای اعداد یک‌رقمی -->
+                <!-- فیلد تک عددی برای کد تأیید -->
                 <div class="mb-3">
-                  <label for="code" class="form-label">کد تأیید:</label>
-                  <div class="input-group">
-                    <input
-                      type="number"
-                      class="form-control"
-                      maxlength="1"
-                      min="0"
-                      max="9"
-                      required
-                    />
-                    <input
-                      type="number"
-                      class="form-control"
-                      maxlength="1"
-                      min="0"
-                      max="9"
-                      required
-                    />
-                    <input
-                      type="number"
-                      class="form-control"
-                      maxlength="1"
-                      min="0"
-                      max="9"
-                      required
-                    />
-                    <input
-                      type="number"
-                      class="form-control"
-                      maxlength="1"
-                      min="0"
-                      max="9"
-                      required
-                    />
-                    <input
-                      type="number"
-                      class="form-control"
-                      maxlength="1"
-                      min="0"
-                      max="9"
-                      required
-                    />
-                  </div>
+                  <label for="verification-code" class="form-label">کد تأیید:</label>
+                  <input
+                    type="number"
+                    id="verification-code"
+                    class="form-control single-input"
+                    placeholder="کد ۵ رقمی را وارد کنید"
+                    min="10000"
+                    max="99999"
+                    required
+                  />
                 </div>
 
                 <!-- دکمه‌های تایید نهایی و کد را دریافت نکردید -->
